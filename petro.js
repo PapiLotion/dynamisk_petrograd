@@ -31,6 +31,21 @@ function visProdukt( produkt) {
 
     klon.querySelector(".data_billede").src = "/imgs/small/" + produkt.billede + "-sm.jpg";
 
+    if(produkt.udsolgt == false ){
+        //produkt er ikke udsolgt
+        //udsolgttekst skal fjernes
+        var udsolgttekst = klon.querySelector(".udsolgttekst");
+        udsolgttekst.parentNode.removeChild( udsolgttekst );
+    } else{
+        klon.querySelector(".pris").classList.add("udsolgt");
+    }
+
+    if( produkt.udsolgt == true  || produkt.rabatsats == 0 ) {
+        //der er ikke rabat, rabatprisen skal fjernes
+        var rabatpris = klon.querySelector(".rabatpris");
+        rabatpris.parentNode.removeChild(rabatpris);
+    }
+
     // Append klon .alleretter
     document.querySelector(".alleretter").appendChild(klon);
 }
