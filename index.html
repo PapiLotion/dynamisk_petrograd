@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="da">
+
+<head>
+
+<title>Restaurant Petro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0">
+
+<link href="stylescheet.css" type="text/css" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+</head>
+
+
+
+<body>
+
+
+    <div class="container-fluid">
+
+        <div class="row splash"><h1>Restaurant Petrograd</h1></div>
+
+    </div>
+
+
+    <div class="container alleretter">
+        <section class="row forretter">
+            <h2>Forretter:</h2>
+
+<template id="produkt_template">
+        <div class="col-sm-3 col-md-3 col-lg-3 forret1">
+        <a href="#"> <img class="img responsive data_billede" src="imgs/small/baltiskbondesuppe-sm.jpg" alt=""></a>
+        <h3 class="data_navn">DATA_NAVN</h3>
+        <h4 class="pris">Pris: <span class="data_pris">DATA_PRIS</span>,-</h4>
+        <h4 class="udsolgttekst">Denne ret er udsolgt</h4>
+        <h4 class="rabat_pris">Pris: <span class="data_rabatpris">DATA_RABAT</span>,-</h4>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+ Se Detaljer
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Baltisk bondesuppe</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+           Om retten: <span class="data_info">INFO</span><br>
+           Pris: <span class="data_pris">PRIS</span><br>
+           Rabat: <span class="data_rabat">RABAT</span><br>
+           Vegetar: <span class="data_vegetar">VEGETAR/IKKE-VEGETAR</span><br>
+           Køkkenstatus: <span class="data_status">IKKE PÅ LAGER :D</span><br>
+
+
+          </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</template>
+
+        <div class="col-sm-3 forret2">
+
+
+            </div>
+        <div class="col-sm-3 forret3">
+
+            </div>
+
+        </section>
+
+            <section class="row hovedretter">
+                <h2>Hovedretter:</h2>
+        <div class="col-sm-3 hovedret1"></div>
+        <div class="col-sm-3 hovedret2"></div>
+        <div class="col-sm-3 hovedret3"></div>
+
+        </section>
+
+        <section class="row desserter">
+            <h2>Desserter:</h2>
+        <div class="col-sm-3 dessert1"></div>
+        <div class="col-sm-3 dessert2"></div>
+        <div class="col-sm-3 dessert3"></div>
+
+        </section>
+
+            <section class="row drikkevare">
+                <h2>Drikkevare:</h2>
+        <div class="col-sm-3 drik1"></div>
+        <div class="col-sm-3 drik2"></div>
+        <div class="col-sm-3 drik3"></div>
+
+        </section>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+
+
+
+
+</html>
