@@ -25,11 +25,16 @@ function visProdukt( produkt) {
     klon.querySelector(".data_pris").innerHTML = produkt.pris;
 
 
+
     var rabatpris = Math.ceil(produkt.pris - (produkt.pris*produkt.rabatsats/100));
     klon.querySelector(".data_rabatpris").innerHTML = rabatpris;
 
 
     klon.querySelector(".data_billede").src = "/imgs/small/" + produkt.billede + "-sm.jpg";
+
+    klon.querySelector('button').dataset.id = produkt.id;
+    klon.querySelector('button').addEventListener('click', knapKlikketPå)
+
 
     if(produkt.udsolgt == false ){
         //produkt er ikke udsolgt
@@ -46,18 +51,35 @@ function visProdukt( produkt) {
         rabatpris.parentNode.removeChild(rabatpris);
     }
 
-    // Append klon .alleretter
-    //document.querySelector(".alleretter").appendChild(klon);
-    console.log("." + produkt.kategori)
+
+    //console.log("." + produkt.kategori)
 
     document.querySelector("." + produkt.kategori).appendChild(klon);
-    /*
-    if(produkt.kategori == 'forretter'){
-        document.querySelector(".forretter").appendChild(klon);
-    } else if(produkt.kategori == 'hovedretter'){
-         document.querySelector(".hovedretter").appendChild(klon);
-    }*/
 
-
-    //document.querySelector(".forretter").appendChild(klon);
 }
+
+
+function knapKlikketPå(oplysningerOmEventet){
+
+    var produktId = oplysningerOmEventet.target.dataset.id;
+
+
+    //send foresprøgelse til API'en - med det rigtige ID
+    $.getJSON("http://petlatkea.dk/2017/dui/api/product?callback=?&id="+produktId, visDetaljer);
+}
+
+
+
+
+
+function visDetaljer(mereInfo){
+    //console.log(mereInfo)
+
+    document.querySelector('#myModalLabel').textContent=mereInfo.navn;
+    document.querySelector('#myModal .modal-body p').textContent=mereInfo.langbeskrivelse;
+    document.querySelector(".info_billede").src = "/imgs/medium/" + mereInfo.billede + "-md.jpg";
+
+}
+
+
+

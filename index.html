@@ -44,36 +44,9 @@
         <h4 class="rabatpris">Rabatpris: <span class="data_rabatpris">DATA_RABAT</span>,-</h4>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+<button data-id="UDSKIFT_MIG" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
  Se Detaljer
 </button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Baltisk bondesuppe</h4>
-      </div>
-      <div class="modal-body">
-        <p>
-           Om retten: <span class="data_info">INFO</span><br>
-           Pris: <span class="data_pris">PRIS</span><br>
-           Rabat: <span class="data_rabat">RABAT</span><br>
-           Vegetar: <span class="data_vegetar">VEGETAR/IKKE-VEGETAR</span><br>
-           Køkkenstatus: <span class="data_status">IKKE PÅ LAGER :D</span><br>
-
-
-          </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-      </div>
-    </div>
-  </div>
-</div>
 
 </div>
 </template>
@@ -117,6 +90,30 @@
 
         </section>
 
+
+
+
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+          <a href="#"> <img class="img responsive info_billede" src="imgs/small/baltiskbondesuppe-sm.jpg" alt=""></a>
+        <p></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Modal slut  -->
 
 
 
