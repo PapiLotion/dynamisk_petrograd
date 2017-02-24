@@ -9,7 +9,7 @@ function sidenVises() {
 }
 
 function visProduktListe( listen ) {
-    console.table( listen );
+    //console.table( listen );
     listen.forEach (visProdukt);
 
 }
@@ -47,5 +47,17 @@ function visProdukt( produkt) {
     }
 
     // Append klon .alleretter
-    document.querySelector(".alleretter").appendChild(klon);
+    //document.querySelector(".alleretter").appendChild(klon);
+    console.log("." + produkt.kategori)
+
+    document.querySelector("." + produkt.kategori).appendChild(klon);
+    /*
+    if(produkt.kategori == 'forretter'){
+        document.querySelector(".forretter").appendChild(klon);
+    } else if(produkt.kategori == 'hovedretter'){
+         document.querySelector(".hovedretter").appendChild(klon);
+    }*/
+
+
+    //document.querySelector(".forretter").appendChild(klon);
 }
